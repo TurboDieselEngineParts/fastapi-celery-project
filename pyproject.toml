@@ -12,6 +12,8 @@ dependencies = [
     "python-jose[cryptography]>=3.3.0",
     "passlib[bcrypt]>=1.7.0",
     "scalar-fastapi",
+    "celery==5.5.3",
+    "flower==2.0.1",
 ]
 
 [project.optional-dependencies]
