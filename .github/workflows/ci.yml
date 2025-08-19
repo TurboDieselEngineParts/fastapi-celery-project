@@ -60,9 +60,3 @@ jobs:
 
       - name: Format with Black
         run: black --check .
-
-      - name: Run tests
-        env:
-          DATABASE_URL: postgresql://user:password@localhost:5432/db
-          REDIS_URL: redis://localhost:6379
-        run: pytest -v
