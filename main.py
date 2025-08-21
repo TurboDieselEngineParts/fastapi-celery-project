@@ -1,12 +1,7 @@
-from celery import Celery
-from fastapi import FastAPI
+from project import create_app
 
-app = FastAPI()
-
-
-celery = Celery(
-    __name__, broker="redis://127.0.0.1:6379/0", backend="redis://127.0.0.1:6379/0"
-)
+app = create_app()
+celery = app.celery_app
 
 
 @app.get("/")
